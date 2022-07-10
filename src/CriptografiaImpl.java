@@ -8,10 +8,12 @@ public class CriptografiaImpl extends UnicastRemoteObject
     
     protected CriptografiaImpl() throws RemoteException {
         super();
-    }
+    }//Método utilizado em java para poder chama Interface
 
     @Override
+    //Declaração de metodo criptografar
     public String criptografar(String a) throws RemoteException {
+        //Variaveís
         char charArray[];
         char charAux=' ';
         String output = "Texto: "+ a;
@@ -21,7 +23,11 @@ public class CriptografiaImpl extends UnicastRemoteObject
 
         //Pegar a cadeia de caracter e distribui em um vector
         a.getChars(0,tam,charArray,0);
-        
+
+        /*
+        Percorre a cádeia de caracter procurando um esqpecifico e substitui
+        pelo charAux;
+        */
         for (int count = 0; count < charArray.length; count++){
             
             if (charArray[count]==' ') charAux= ' ';
@@ -51,10 +57,12 @@ public class CriptografiaImpl extends UnicastRemoteObject
             if (charArray[count]== 'X' || charArray[count]== 'x') charAux= 'w';
             if (charArray[count]== 'Y' || charArray[count]== 'y') charAux= 't';
             if (charArray[count]== 'Z' || charArray[count]== 'z') charAux= 'y';
-            
+
+            //
             charArray[count]= charAux;
             output+=charArray[count];
         }
+        //Resultado da troca;
         return output;
     }
 

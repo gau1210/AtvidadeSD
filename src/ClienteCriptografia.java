@@ -13,6 +13,7 @@ public class ClienteCriptografia {
                 "\nNão = Descriptografar", "Escolha uma opção!", 0);
 
         try {
+            //Faz a chamada do método remoto para o servidor
             Criptografia stub = (Criptografia) Naming.lookup("rmi://localhost:1099/criptoService");
             if (opcao == 0) {
                 A = JOptionPane.showInputDialog("Entre com o TEXTO. Sem acento");
