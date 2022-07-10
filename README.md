@@ -8,15 +8,15 @@
 
 # O algoritmo: 
 
-* 1- Criação da interface com os métodos no servidor;
+* Criação da interface com os métodos no servidor;
 
-* 2- Uma classe localizada no JVM (Java Virtual Machine) que vai implementar os métodos definidos na interface;
+* Uma classe localizada no JVM (Java Virtual Machine) que vai implementar os métodos definidos na interface;
  
-* 3- Classe que implementa o protocolo de comunicação, protocolo utilizado foi o Stub ele é responsável por fazer a chamada de método no cliente seja passada ao servidor, assim como fazer o servidor responder a essa chamada, trazendo de volta a resposta solicitada pelo cliente;
+* Classe que implementa o protocolo de comunicação, protocolo utilizado foi o Stub ele é responsável por fazer a chamada de método no cliente seja passada ao servidor, assim como fazer o servidor responder a essa chamada, trazendo de volta a resposta solicitada pelo cliente;
  
-* 4- Um serviço de nomes (rmiregistry) responsável em informar o cliente onde está o servidor;
+* Um serviço de nomes (rmiregistry) responsável em informar o cliente onde está o servidor;
  
-* 5 – Execultar o servidor e depois o cliente e ver o sistema funcionando. 
+* Execultar o servidor e depois o cliente e ver o sistema funcionando. 
 
 # Programação: 
 
